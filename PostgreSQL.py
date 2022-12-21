@@ -1,6 +1,6 @@
 import psycopg2
 from psycopg2 import extensions
-from config import host,user,password,workin_db
+from config import host,user,password,working_db
 
 class Database:
 	def __init__(self,db):
@@ -21,7 +21,7 @@ class Database:
 		
 		databases=self.cursor.fetchall()
 		for a in databases:
-			if workin_db in a[0]:
+			if working_db in a[0]:
 				return
 			
 		auto_commit=extensions.ISOLATION_LEVEL_AUTOCOMMIT
