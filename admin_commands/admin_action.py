@@ -1,11 +1,8 @@
-from aiogram import types,F
 from aiogram.fsm.context import FSMContext
-from aiogram.types import InlineKeyboardButton,InlineKeyboardMarkup,Message
-from aiogram.utils.keyboard import KeyboardBuilder,KeyboardButton,ReplyKeyboardMarkup
-from messages import MESSAGES
+from aiogram.types import InlineKeyboardButton,Message
+from aiogram.utils.keyboard import KeyboardBuilder,KeyboardButton
 from States import Sum
 from qiwi.authorization_qiwi import p2p
-from callback_factories import data_user_CD
 from PostgreSQL import Database
 from config import working_db,admin_id
 
