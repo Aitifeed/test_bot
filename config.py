@@ -6,7 +6,7 @@ password= ''
 
 admin_id=0
 
-working_db=''
+working_db='db_test'
 
 key_qiwi=''
 
