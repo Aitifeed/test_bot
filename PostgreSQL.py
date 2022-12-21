@@ -5,15 +5,15 @@ from config import host,user,password,working_db
 class Database:
 	def __init__(self,db):
 		self.connect=psycopg2.connect(host=host,
-									user=user,
-									password=password,
-									database=db)
+						user=user,
+						password=password,
+						database=db)
 		self.cursor=self.connect.cursor()
 
 	def create_database_and_table(self):
 		self.connect=psycopg2.connect(host=host,
-									user=user,
-									password=password)
+						user=user,
+						password=password)
 
 		self.cursor=self.connect.cursor()	
 		
@@ -32,13 +32,13 @@ class Database:
 		self.cursor.close()
 
 		self.connect=psycopg2.connect(host=host,
-									user=user,
-									password=password,
-									database='db_test')
+						user=user,
+						password=password,
+						database='db_test')
 
 		self.cursor=self.connect.cursor()
 		self.cursor.execute("CREATE TABLE test_table ("
-								"id			BIGSERIAL,"
+								"id		BIGSERIAL,"
 								"user_id 	INTEGER,"
 								"username 	TEXT,"
 								"balance	INTEGER DEFAULT 0,"
